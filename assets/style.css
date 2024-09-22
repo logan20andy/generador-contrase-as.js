@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+body {
+  background: linear-gradient(
+    #00ffff 0%,
+    #00b2b7 33.33%,
+    #006c72 66.67%,
+    #00343a 100%
+  );
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body::before {
+  background-image: url("img/fondo.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+
+.container {
+  width: 80%;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 24px;
+  border: 3px solid #008c91;
+  box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
+  /* background-image: url("img/Ruido.png"); */
+  background-color: rgba(0, 52, 58, 0.5);
+  background-size: 100% 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.container__contenido {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.container__informacion {
+  flex: 1;
+  padding: 3rem;
+}
+
+h1 {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  padding: 2rem;
+}
+
+.container__texto {
+  margin: 12px 0;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  text-shadow: 1px 2px 2px #00343a;
+}
+
+.container__texto-azul {
+  color: #00e1e2;
+  display: block;
+}
+
+.container__campo {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  margin-bottom: 12px;
+  margin: 30px;
+  gap: 2rem;
+}
+
+.texto__parrafo {
+  color: #fff;
+  text-shadow: 1px 2px 2px #00343a;
+  font-family: "Inter";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 10px;
+}
+
+.container__input {
+  width: 148px;
+  height: 72px;
+  border-radius: 16px;
+  background-color: #00e1e2;
+  border: none;
+  color: #00343a;
+  padding: 2rem;
+  font-size: 24px;
+  font-weight: 900;
+  font-family: "Inter", sans-serif;
+}
+
+.boton {
+  color: #00343a;
+  font-size: 2rem;
+  border: none;
+  background-color: #00e1e2;
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  width: 243px;
+  height: 72px;
+  box-shadow: 0px 0px 20px 0px #00343a;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.boton:hover {
+  transform: scale(1.1); /* escala el botón un 10% */
+  box-shadow: 0px 0px 30px 0px #00343a; /* aumenta el tamaño del sombreado */
+  animation: pulse 1.5s infinite; /* activa la animación de pulso */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px 0px #00343a;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px 0px #00343a;
+  }
+  100% {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px 0px #00343a;
+  }
+}
+.container__contrasena {
+  width: 496px;
+  height: 72px;
+  border-radius: 16px;
+  background-color: #00e1e2;
+  border: none;
+  color: #00343a;
+  margin: 50px;
+  padding: 2rem;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+}
+input::placeholder {
+  color: #00343a; /* cambia el color del placeholder a gris claro */
+}
